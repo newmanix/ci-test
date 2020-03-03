@@ -1,3 +1,21 @@
+#main folders --------------------------
+
+#location for tests
+**/tests/
+
+#CI core resides here
+**/system/
+
+#vendor file if included ---------------
+**/vendor/
+
+#security items ------------------------
+
+#don't save credentials in repo
+database.php
+
+#logs & cache --------------------------
+
 */config/development
 */logs/log-*.php
 !*/logs/index.html
@@ -5,13 +23,22 @@
 !*/cache/index.html
 !*/cache/.htaccess
 
+#user guide ----------------------------
+
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
-#codeigniter 3
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
-/vendor/
+
+#miscellaneous items -------------------
+
+#if there are errors, they show up in the root
+error_log
+
+#potentially accidentally uploaded files
+*.DS_Store
+*Thumbs.db
+*.bak
+.hg/*
+
